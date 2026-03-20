@@ -1,0 +1,18 @@
+data_path: "data/raw/bank+marketing/bank/bank-full.csv"
+
+target: "y"
+
+test_size: 0.2
+random_state: 42
+
+model:
+  logistic:
+    C: 1.0
+  rf:
+    n_estimators: 100
+  xgb:
+    n_estimators: 200
+    max_depth: 5
+
+semi_supervised:
+  labeled_percent: [5, 10, 20]
